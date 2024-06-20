@@ -100,28 +100,33 @@ public class HomeInstructorController : Controller
     [HttpGet]
     public IActionResult JoinedUsers()
     {
-     long userIdFromSession = long.Parse(HttpContext.Session.GetString("UserID"));
+        long userIdFromSession = long.Parse(HttpContext.Session.GetString("UserID"));
+
+        // Retrieve courses taught by the current instructor
         List<Course> coursesForThisInstructor = _dbContext.Courses
             .Where(c => c.InstructorID == userIdFromSession)
             .ToList();
 
-        var usersFromEnrollments = new List<User>();
-        
+        var usersFromEnrollments = new HashSet<User>(); // Changed to HashSet<User>
+
         foreach (var course in coursesForThisInstructor)
         {
-            _logger.LogInformation(course.CourseID.ToString());
-            // Retrieve users who have joined the specified course
-             usersFromEnrollments = _dbContext.Enrollments
+            // Retrieve users who have joined each course
+            var users = _dbContext.Enrollments
                 .Where(e => e.CourseID == course.CourseID)
                 .Select(e => e.Student)
                 .ToList();
-           
+
+            usersFromEnrollments.UnionWith(users); // Add retrieved users to the HashSet
         }
-        _logger.LogInformation(usersFromEnrollments.ToString());
-        
-        
-        return View(usersFromEnrollments); // Assuming you have a corresponding view for displaying course details
+
+        // Log information for debugging
+        _logger.LogInformation($"Retrieved {usersFromEnrollments.Count} users from enrollments.");
+
+        return View(usersFromEnrollments.ToList()); // Pass the HashSet converted to List to the view
     }
+
+
     
     // GET: /HomeInstructor/CourseDetails/{id}
     [HttpGet]

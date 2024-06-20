@@ -1,0 +1,43 @@
+﻿@model List<Online_Learning_Management_Sysytem_MVC.User>
+
+@{
+ViewData["Title"] = "Joined Users";
+//Layout = "~/Views/Shared/_Layout.cshtml"; // Replace with your layout file path if different
+}
+
+<h2>Users Joined Courses</h2>
+
+@if (Model != null && Model.Count > 0)
+{
+<table class="table">
+    <thead>
+    <tr>
+        <th>User ID</th>
+        <th>Username</th>
+        <th>Email</th>
+        <!-- Add more columns as needed -->
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+    <tr>
+        <td>@user.UserID</td> <!-- Replace with actual property names -->
+        <td>@user.Username</td>
+        <td>@user.Email</td>
+        <!-- Add more columns as needed -->
+    </tr>
+    }
+    </tbody>
+</table>
+}
+else
+{
+<p>No users have joined courses taught by you.</p>
+}
+
+<a asp-controller="HomeInstructor" asp-action="Index" class="btn btn-outline-primary">Back to Courses</a>
+
+@section Scripts {
+<!-- Any additional scripts you may need -->
+}

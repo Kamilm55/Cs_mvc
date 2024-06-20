@@ -1,0 +1,228 @@
+﻿@* @model List<User> *@
+@model List<Course>
+
+
+    
+<br />
+<div class="row">
+
+    <div class="col-lg-8 mb-4 order-0">
+        <div class="card">
+            <div class="d-flex align-items-end row">
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
+                        <p class="mb-4">You have done <span class="fw-medium">72%</span> more sales today for courses. You can see in your profile.</p>
+
+                        <a href="@Url.Action("Index", "Profile")" class="btn btn-sm btn-outline-primary">View Profile</a>
+                    </div>
+                </div>
+                <div class="col-sm-5 text-center text-sm-left">
+                    <div class="card-body pb-0 px-0 px-md-4">
+                        @*  <img src="../assets/img/illustrations/man-with-laptop-light.png" height="140" alt="View Badge User" data-app-dark-img="illustrations/man-with-laptop-dark.png" data-app-light-img="illustrations/man-with-laptop-light.png"> *@
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <div class="col-lg-4 mb-4 order-1">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between flex-sm-row flex-column gap-3" style="position: relative;">
+                    <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
+                        <div class="card-title">
+                            <h5 class="text-nowrap mb-2">Profile Report</h5>
+                            <span class="badge bg-label-warning rounded-pill">Year 2021</span>
+                        </div>
+                        <div class="mt-sm-auto">
+                            <small class="text-success text-nowrap fw-medium"><i class="bx bx-chevron-up"></i> 68.2%</small>
+                            <h3 class="mb-0">$84,686k</h3>
+                        </div>
+                    </div>
+                    @*
+                <div id="profileReportChart" style="min-height: 80px;"><div id="apexchartss5for832" class="apexcharts-canvas apexchartss5for832 apexcharts-theme-light" style="width: 116px; height: 80px;"><svg id="SvgjsSvg1676" width="116" height="80" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><g id="SvgjsG1678" class="apexcharts-inner apexcharts-graphical" transform="translate(0, 0)"><defs id="SvgjsDefs1677"><clipPath id="gridRectMasks5for832"><rect id="SvgjsRect1683" width="117" height="85" x="-4.5" y="-2.5" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath><clipPath id="forecastMasks5for832"></clipPath><clipPath id="nonForecastMasks5for832"></clipPath><clipPath id="gridRectMarkerMasks5for832"><rect id="SvgjsRect1684" width="112" height="84" x="-2" y="-2" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath><filter id="SvgjsFilter1690" filterUnits="userSpaceOnUse" width="200%" height="200%" x="-50%" y="-50%"><feFlood id="SvgjsFeFlood1691" flood-color="#ffab00" flood-opacity="0.15" result="SvgjsFeFlood1691Out" in="SourceGraphic"></feFlood><feComposite id="SvgjsFeComposite1692" in="SvgjsFeFlood1691Out" in2="SourceAlpha" operator="in" result="SvgjsFeComposite1692Out"></feComposite><feOffset id="SvgjsFeOffset1693" dx="5" dy="10" result="SvgjsFeOffset1693Out" in="SvgjsFeComposite1692Out"></feOffset><feGaussianBlur id="SvgjsFeGaussianBlur1694" stdDeviation="3 " result="SvgjsFeGaussianBlur1694Out" in="SvgjsFeOffset1693Out"></feGaussianBlur><feMerge id="SvgjsFeMerge1695" result="SvgjsFeMerge1695Out" in="SourceGraphic"><feMergeNode id="SvgjsFeMergeNode1696" in="SvgjsFeGaussianBlur1694Out"></feMergeNode><feMergeNode id="SvgjsFeMergeNode1697" in="[object Arguments]"></feMergeNode></feMerge><feBlend id="SvgjsFeBlend1698" in="SourceGraphic" in2="SvgjsFeMerge1695Out" mode="normal" result="SvgjsFeBlend1698Out"></feBlend></filter></defs><line id="SvgjsLine1682" x1="0" y1="0" x2="0" y2="80" stroke="#b6b6b6" stroke-dasharray="3" stroke-linecap="butt" class="apexcharts-xcrosshairs" x="0" y="0" width="1" height="80" fill="#b1b9c4" filter="none" fill-opacity="0.9" stroke-width="1"></line><g id="SvgjsG1699" class="apexcharts-xaxis" transform="translate(0, 0)"><g id="SvgjsG1700" class="apexcharts-xaxis-texts-g" transform="translate(0, -4)"></g></g><g id="SvgjsG1708" class="apexcharts-grid"><g id="SvgjsG1709" class="apexcharts-gridlines-horizontal" style="display: none;"><line id="SvgjsLine1711" x1="0" y1="0" x2="108" y2="0" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1712" x1="0" y1="20" x2="108" y2="20" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1713" x1="0" y1="40" x2="108" y2="40" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1714" x1="0" y1="60" x2="108" y2="60" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1715" x1="0" y1="80" x2="108" y2="80" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line></g><g id="SvgjsG1710" class="apexcharts-gridlines-vertical" style="display: none;"></g><line id="SvgjsLine1717" x1="0" y1="80" x2="108" y2="80" stroke="transparent" stroke-dasharray="0" stroke-linecap="butt"></line><line id="SvgjsLine1716" x1="0" y1="1" x2="0" y2="80" stroke="transparent" stroke-dasharray="0" stroke-linecap="butt"></line></g><g id="SvgjsG1685" class="apexcharts-line-series apexcharts-plot-series"><g id="SvgjsG1686" class="apexcharts-series" seriesName="seriesx1" data:longestSeries="true" rel="1" data:realIndex="0"><path id="SvgjsPath1689" d="M 0 76C 7.56 76 14.040000000000003 12 21.6 12C 29.16 12 35.64 62 43.2 62C 50.76 62 57.24 22 64.8 22C 72.36 22 78.84 38 86.4 38C 93.96000000000001 38 100.44 6 108 6" fill="none" fill-opacity="1" stroke="rgba(255,171,0,0.85)" stroke-opacity="1" stroke-linecap="butt" stroke-width="5" stroke-dasharray="0" class="apexcharts-line" index="0" clip-path="url(#gridRectMasks5for832)" filter="url(#SvgjsFilter1690)" pathTo="M 0 76C 7.56 76 14.040000000000003 12 21.6 12C 29.16 12 35.64 62 43.2 62C 50.76 62 57.24 22 64.8 22C 72.36 22 78.84 38 86.4 38C 93.96000000000001 38 100.44 6 108 6" pathFrom="M -1 120L -1 120L 21.6 120L 43.2 120L 64.8 120L 86.4 120L 108 120"></path><g id="SvgjsG1687" class="apexcharts-series-markers-wrap" data:realIndex="0"><g class="apexcharts-series-markers"><circle id="SvgjsCircle1723" r="0" cx="0" cy="0" class="apexcharts-marker w81t2bkry no-pointer-events" stroke="#ffffff" fill="#ffab00" fill-opacity="1" stroke-width="2" stroke-opacity="0.9" default-marker-size="0"></circle></g></g></g><g id="SvgjsG1688" class="apexcharts-datalabels" data:realIndex="0"></g></g><line id="SvgjsLine1718" x1="0" y1="0" x2="108" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" stroke-linecap="butt" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine1719" x1="0" y1="0" x2="108" y2="0" stroke-dasharray="0" stroke-width="0" stroke-linecap="butt" class="apexcharts-ycrosshairs-hidden"></line><g id="SvgjsG1720" class="apexcharts-yaxis-annotations"></g><g id="SvgjsG1721" class="apexcharts-xaxis-annotations"></g><g id="SvgjsG1722" class="apexcharts-point-annotations"></g></g><rect id="SvgjsRect1681" width="0" height="0" x="0" y="0" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fefefe"></rect><g id="SvgjsG1707" class="apexcharts-yaxis" rel="0" transform="translate(-18, 0)"></g><g id="SvgjsG1679" class="apexcharts-annotations"></g></svg><div class="apexcharts-legend" style="max-height: 40px;"></div><div class="apexcharts-tooltip apexcharts-theme-light"><div class="apexcharts-tooltip-title" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"></div><div class="apexcharts-tooltip-series-group" style="order: 1;"><span class="apexcharts-tooltip-marker" style="background-color: rgb(255, 171, 0);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-y-label"></span><span class="apexcharts-tooltip-text-y-value"></span></div><div class="apexcharts-tooltip-goals-group"><span class="apexcharts-tooltip-text-goals-label"></span><span class="apexcharts-tooltip-text-goals-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div><div class="apexcharts-yaxistooltip apexcharts-yaxistooltip-0 apexcharts-yaxistooltip-left apexcharts-theme-light"><div class="apexcharts-yaxistooltip-text"></div></div></div></div>
+                *@
+                
+                    <div class="resize-triggers"><div class="expand-trigger"><div style="width: 255px; height: 118px;"></div></div><div class="contract-trigger"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<form method="get" asp-controller="HomeInstructor" asp-action="Create">
+    <div class="form-group my-1">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit"  class="btn btn-outline-primary"  >Create new course</button>
+        </div>
+    </div>
+</form>
+
+<form method="get" asp-controller="HomeInstructor" asp-action="JoinedUsers">
+    <div class="form-group my-1">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit"  class="btn btn-outline-success"  >Students that joined my course</button>
+        </div>
+    </div>
+</form>
+
+
+<h1 class="text-center my-2 mb-3">My Courses</h1>
+
+<div class="row my-2">
+    @foreach (var course in Model)
+    {
+        <div class="card h-130 col-3 p-3 my-1 ">
+            <img class="card-img-top" src="~/sneat/assets/img/course2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@course.Title</h5>
+                <h6 class="card-title">Instructor name: John</h6>
+                <p class="card-text">
+                    @course.Description
+                </p>
+                <a asp-controller="HomeInstructor" asp-action="CourseDetails" asp-route-id="@course.CourseID" class="btn btn-outline-primary mt-1">Go to course</a> 
+                <a asp-controller="HomeInstructor" asp-action="Delete" asp-route-id="@course.CourseID" class="btn btn-outline-danger mt-1">Delete</a>
+                <a asp-controller="HomeInstructor" asp-action="Edit" asp-route-id="@course.CourseID" class="btn btn-outline-success mt-1">Edit</a>
+            </div>
+        </div>
+    }
+</div>
+<br />
+<hr />
+<br />
+
+
+<div class="row">
+    <div class="card">
+        <h5 class="card-header">Assesments Table</h5>
+        <div class="table-responsive text-nowrap">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Due Date</th>
+                        <th>Instructors</th>
+                        <th>Status</th>@* 
+                        <th>Actions</th> *@
+                    </tr>
+                </thead>
+                <tbody class="table-border-bottom-0">
+                    <tr>
+                        <td><i class="bx bxl-angular bx-sm text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                        <td>16/02/2025</td>
+                        <td>
+                            <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Lilian Fuller" data-bs-original-title="Lilian Fuller">
+                                    <img src="~/sneat/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Sophia Wilkerson" data-bs-original-title="Sophia Wilkerson">
+                                    <img src="~/sneat/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Christina Parker" data-bs-original-title="Christina Parker">
+                                    <img src="~/sneat/assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                            </ul>
+                        </td>
+                        <td><span class="badge bg-label-primary me-1">Active</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="bx bxl-react bx-sm text-info me-3"></i> <span class="fw-medium">React Project</span></td>
+                        <td>14/07/2024</td>
+                        <td>
+                            <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Lilian Fuller" data-bs-original-title="Lilian Fuller">
+                                    <img src="~/sneat/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Sophia Wilkerson" data-bs-original-title="Sophia Wilkerson">
+                                    <img src="~/sneat/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Christina Parker" data-bs-original-title="Christina Parker">
+                                    <img src="~/sneat/assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                            </ul>
+                        </td>
+                        <td><span class="badge bg-label-success me-1">Completed</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="bx bxl-vuejs bx-sm text-success me-3"></i> <span class="fw-medium">VueJs Project</span></td>
+                        <td>28/08/2024</td>
+                        <td>
+                            <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Lilian Fuller" data-bs-original-title="Lilian Fuller">
+                                    <img src="~/sneat/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Sophia Wilkerson" data-bs-original-title="Sophia Wilkerson">
+                                    <img src="~/sneat/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Christina Parker" data-bs-original-title="Christina Parker">
+                                    <img src="~/sneat/assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                            </ul>
+                        </td>
+                        <td><span class="badge bg-label-info me-1">Scheduled</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="bx bxl-bootstrap bx-sm text-primary me-3"></i> <span class="fw-medium">Bootstrap Project</span></td>
+                        <td>16/12/2024</td>
+                        <td>
+                            <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Lilian Fuller" data-bs-original-title="Lilian Fuller">
+                                    <img src="~/sneat/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Sophia Wilkerson" data-bs-original-title="Sophia Wilkerson">
+                                    <img src="~/sneat/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" aria-label="Christina Parker" data-bs-original-title="Christina Parker">
+                                    <img src="~/sneat/assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                                </li>
+                            </ul>
+                        </td>
+                        <td><span class="badge bg-label-warning me-1">Pending</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<br />
+<br />

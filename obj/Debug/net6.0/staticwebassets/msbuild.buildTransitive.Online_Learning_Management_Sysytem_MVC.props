@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Online_Learning_Management_Sysytem_MVC.props" />
+</Project>

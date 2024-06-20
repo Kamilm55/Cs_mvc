@@ -1,0 +1,69 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Online_Learning_Management_Sysytem_MVC.DTO.ProfileViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Your App Name</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <main role="main" class="pb-3">
+            <!-- Include the alerts partial view here -->
+            @Html.Partial("_Alerts")
+            <h2 class="mb-4">Profile</h2>
+            <form asp-controller="Profile" asp-action="Index" enctype="multipart/form-data" method="post">
+                <div class="mb-3">
+                    <label for="UserID" class="form-label">User ID</label>
+                    <input type="text" class="form-control" id="UserID" asp-for="UserID" disabled>
+                    <input type="hidden" asp-for="UserID">
+                </div>
+                <div class="mb-3">
+                    <label for="Username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="Username" asp-for="Username">
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="Email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="Email" asp-for="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="Role" class="form-label">Role</label>
+                    <input type="text" class="form-control" id="Role" asp-for="Role" disabled>
+                    <input type="hidden" asp-for="Role">
+                    <span asp-validation-for="Role" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="Photo" class="form-label">Profile Photo</label>
+                    <div>
+                        <img src="@Model.PhotoUrl" alt="Profile Photo" class="img-thumbnail" style="max-width: 150px;">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="Photo" class="form-label">Photo URL</label>
+                    <input type="file" class="form-control" id="Photo" asp-for="Photo" >
+                    <span asp-validation-for="Photo" class="text-danger"></span>
+                    <input type="hidden" asp-for="Photo">
+                </div>
+                <div class="mb-3">
+                    @*<label for="PhotoUrl" class="form-label">Photo URL</label>*@
+                    <input type="hidden" asp-for="PhotoUrl">
+                </div>
+                <button type="submit" class="btn btn-primary">Update Profile</button>
+            </form>
+
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+</html>

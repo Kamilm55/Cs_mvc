@@ -1,0 +1,60 @@
+﻿@model Online_Learning_Management_Sysytem_MVC.Course
+
+<h2>Course Details</h2>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">Course ID</dt>
+        <dd class="col-sm-10">@Model.CourseID</dd>
+
+        <dt class="col-sm-2">Instructor ID</dt>
+        <dd class="col-sm-10">@Model.InstructorID</dd>
+
+        <dt class="col-sm-2">Title</dt>
+        <dd class="col-sm-10">@Model.Title</dd>
+
+        <dt class="col-sm-2">Description</dt>
+        <dd class="col-sm-10">@Model.Description</dd>
+
+        <!-- Add other properties of 'Course' model as needed -->
+
+        @* Assessments *@
+        <dt class="col-sm-2">Assessments</dt>
+        <dd class="col-sm-10">
+            @foreach (var assessment in Model.Assessments)
+            {
+            <div>
+                <strong>@assessment.Title</strong>: @assessment.Description
+            </div>
+            }
+        </dd>
+
+        @* Enrollments *@
+        @*<dt class="col-sm-2">Enrollments</dt>
+        <dd class="col-sm-10">
+            @foreach (var enrollment in Model.Enrollments)
+            {
+            <div>
+                Student ID: @enrollment.StudentID
+            </div>
+            }
+        </dd>*@
+
+        @* Course Articles *@
+        <dt class="col-sm-2">Course Articles</dt>
+        <dd class="col-sm-10">
+            @foreach (var article in Model.CourseArticles)
+            {
+            <div>
+                <strong>@article.Title</strong>: @article.Content
+            </div>
+            }
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-controller="HomeInstructor" asp-action="Edit" asp-route-id="@Model.CourseID" class="btn btn-outline-success">Edit</a>
+    <a asp-controller="HomeInstructor" asp-action="Delete" asp-route-id="@Model.CourseID" class="btn btn-outline-danger">Delete</a>
+    <a asp-controller="HomeInstructor" asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+</div>

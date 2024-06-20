@@ -1,0 +1,18 @@
+﻿@model Course
+
+@{
+    ViewData["Title"] = "Course Details";
+}
+
+<h2 class="text-center">Course Details</h2>
+<div class="card h-100 col-6 mx-auto my-5 p-3">
+    <img class="card-img-top" src="~/sneat/assets/img/course2.jpg" alt="Course image cap">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Instructor: Instructor Name</h6>
+        <p class="card-text">
+            @Model.Description
+        </p>
+        <a href="@Url.Action("Index", "Home")" class="btn btn-outline-primary">Back to courses</a>
+    </div>
+</div>
